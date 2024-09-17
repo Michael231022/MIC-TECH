@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    -webkit-tap-highlight-color: transparent;
+}
+
+.landing-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    text-align: center;
+}
+
+.landing-screen.display-none {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    z-index: -10;
+    text-align: center;
+}
+
+.landing-screen img {
+    width: 250px;
+    height: 250px;
+    margin-top: 240px;
+}
+
+/******* Main-Content *******/
+.main_content {
+    width: 100%;
+    height: 5000px;
+}
+
+img {
+    -drag: none;  
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
+}
+
+/******* Header-Bar *******/
+.nav-bar-logo {
+    width: 120px;
+    height: 25px;
+    margin-top: 2px;
+}
+
+.logo-div {
+    width: 100%;
+    height: 100%;
+}
+
+.header-logo {
+    width: 120px;
+    height: 25px;
+}
+
+
+.header-bar {
+    width:100%;
+    height: 75px;
+    color: rgb(40, 113, 221);
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: white; /*rgba(255, 255, 255, 0.438)*/
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);;
+    z-index: 999;
+}
+
+
+.nav-bar-links li, .nav-bar-links a {
+    font-family: 'Tahoma';
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(87, 87, 87); /*rgb(40, 113, 221)*/  /*#2871DD*/
+    transition: all 0.3s ease 0s;
+}
+
+.nav-bar-links li:hover, .nav-bar-links a:hover {
+    color: rgb(26, 26, 26);
+}
+
+.nav-bar-links li {
+    display: inline-block;
+    padding: 0px 20px;
+    padding-top: 7px;
+    height: 35px;
+    border: 0;
+}
+
+.nav-bar-li {
+    margin-left: 30px;
+}
+
+.nav-bar-leftcontent {
+    display: flex;
+    align-items: center;
+}
+
+/** TOGGLE-BUTTON **/
+.toggle-button {
+    position: absolute;
+    top: 29px;
+    left: 40px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width:30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.toggle-button .toggle-bar {
+    height: 3px;
+    width: 100%;
+    background-color: rgb(87, 87, 87);
+    border-radius:10px;
+}
+
+
+/** RIGHT BTN **/
+.nav-bar-btn {
+    margin-left: 30px;
+}
+
+.nav-bar-rightcontent {
+    padding-top: 3px;
+}
+
+.nav-bar-rightcontent a {
+    display: inline-block;
+    margin-left:25px;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+}
+
+.nav-bar-rightcontent a:hover {
+    background-color: rgba(212, 212, 212, 0.555);
+    border-radius: 5px;
+}
+
+.nav-bar-rightcontent svg {
+    width: 23px;
+    height: 23px;
+    color: grey;
+}
+
+
+/******* CONTAINER-IMG *******/
+.header-container {
+    position: relative;
+    top: 75px;
+    width: 100%;
+    height: 660px;
+    overflow: hidden;
+}
+
+.header-img-container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    animation: slide 25s infinite;
+}   
+
+.header-img-container img {
+    width: 100%;
+    min-height: 660px;
+    object-fit: fill;
+}
+
+/*@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(0);
+    }
+    35% {
+        transform: translateX(-100%);
+    }
+    60% {
+        transform: translateX(-100%);
+    }
+    70% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}*/
+
+
+@media (max-width:772px) {
+    .header-img-container {
+        height: 100%;
+    }
+    .header-container {
+        max-height: 462px;
+    }
+    .header-img-container img {
+        min-height: 462px;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 1102px) {
+    .nav-bar-li {
+        display: none;
+    }
+    .nav-bar-logo {
+        margin-left: 60px;
+    }
+    .toggle-button {
+        display: flex;
+        left: 30px;
+    }
+    .nav-bar-btn {
+        margin-left: 0px;
+    }
+    .nav-bar-rightcontent a {
+        margin-left: 15px;
+    }
+}
